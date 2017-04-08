@@ -20,7 +20,22 @@ trainingActivity <- read.table("./data/UCI HAR Dataset/train/Y_train.txt")
 trainSubject <- read.table("./data/UCI HAR Dataset/train/Y_train.txt")
 trainingData <- cbind(trainingActivity, trainSubject, training)
 
-fullData <- tbl_df(rbind(testData, trainingData))
+fullData <- rbind(testData, trainingData)
+fullData <- tbl_df(fullData)
 
+## Read in the feature names that make up the dataframe variable names and apply to complete DF
 featureNames <- read.table("./data/UCI HAR Dataset/features.txt")
-featureNames <- featureNames[,2]
+featureNames <- c("activity", "subjectNumber", as.character(featureNames[,2]))
+names(fullData) <- featureNames
+
+## Construct meaningful activity names for the DF
+activity <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
+for(i in 1:6) {
+    fullData$activity <- gsub(i, activity[i,2], fullData$activity)
+}
+
+## Extract data variables that involve either a mean or a standard deviation
+means <- grep("mean", names(fullData))
+stds <- grep("std", names(fullData))
+extractIndex <- sort(c(1, 2, means, stds))
+statData <- fullData[, extractIndex]
