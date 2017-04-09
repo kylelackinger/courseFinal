@@ -7,6 +7,7 @@ setwd("~/Coursera/Data_Science/Course_Projects/3_Getting_and_Cleaining_Data/cour
 
 ## Download the zipped file from the specified source and unzip to a directory
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+if(!file.exists("./data")) {dir.create("./data")}
 download.file(fileUrl, destfile = "./data/sensorData.zip", mode = "wb")
 unzip("./data/sensorData.zip", exdir = ".data/UCI HAR Dataset")
 
