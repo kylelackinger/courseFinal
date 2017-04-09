@@ -30,10 +30,10 @@ The courseFinal repo contains the following:
 * This README describing the contents of the repo
 * A data folder with all raw data from the UCI repository
 * Codebook.md describing information about the variables seen in the raw data set and summary decisions
-* run_analysis.R script which loads the required data and processes
-* avgData.txt is a tidy data set with the average of each variable for each activity and each subject 
+* run_analysis.R script which loads and process the raw data and returns a tidy summary data set
+* avgData.txt is a tidy data set with the average of each feature variable for each activity type and each subject 
 
-Within the data folder, the following raw data is contained:
+Within the data folder, the following raw data are contained:
 
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
