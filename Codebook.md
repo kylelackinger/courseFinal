@@ -60,5 +60,28 @@ important for this analysis being
 * std() - Standard deviation
 * Many more are contained in the raw data, but are not important for this analysis
 
+## Data Summarization
+
+Activity and subject labels are appended to the test and train data sets.  The
+test and train data sets are then joined to produce one large data frame with
+all observations contained (dimensions: 10299 x 563)
+
+The supplied feature names are then added as column names to the appropriate
+dataframe columns as well as "activity" and "subjectNumber".
+
+Meaningful activity names are added to the full dataframe providing human readable
+data as opposed to 1, 2, 3, 4, 5, or 6.  
+
+Variables (columns) dealing with either a mean or standard deviation are extracted
+from the full dataframe.  Subject IDs and activities are extracted as well.  Results
+are stored in a new dataframe called "statData".
+
+The avarage of all extracted features by activity and subject ID are summarized in
+the "avgData" dataframe.  This frame is stored in a wide format with dimensions 
+equal to 180 x 81.  The "melt" function is used to summarize the original dataframe
+and the "dcast" function is used to restructure and apply the mean function for
+analysis.   Feature data contained in the table is the mean of the feature indicated
+in the column names, with the exception of subject ID and activity.  
+
 
 
