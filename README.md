@@ -2,7 +2,7 @@
 
 * Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-## Original subject matter for the data set was activity recognition of 
+Original subject matter for the data set was activity recognition of 
 ## humans using smartphone data.  The data was pulled from onboard smartphone
 ## sensors, specifically triaxial accelerometer and a gyroscope.  The data
 ## taken from these sensors has already been preprocessed by the original 
