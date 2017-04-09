@@ -14,9 +14,17 @@ The data obtained was initially processed by the original research team and is
 divided into two partitions, training and test data.  For both training and test 
 the following data is provided:
 
-* A subject identifier file idicating which data observations are tied to which specific subject
+* A subject identifier (1 - 30) file idicating which data observations are tied to which specific subject
 * An activity identifier file indicating which data observations are tied to what type of activity
+** Walking
+** Walking Upstairs
+** Walking Downstairs
+** Sitting
+** Standing
+** Laying
 * Feature data from onboard smartphone sensors described in detail in the "features_info.txt" file
+
+Standard units seen in physics apply to the features listed below (e.g. m/s^2 for acceleration)
 
 #### Features Description
 
