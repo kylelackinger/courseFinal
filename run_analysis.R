@@ -44,3 +44,6 @@ statData <- tbl_df(fullData[, extractIndex])
 varNames <- names(statData)[3:ncol(statData)]
 statMelt <- melt(statData, id = c("activity", "subjectNumber"), measure.vars = varNames)
 avgData <- dcast(statMelt, activity + subjectNumber ~ variable, mean)
+
+## Write the averaged data set to file for submission
+write.table(avgData, file = "./avgData.txt",row.names = FALSE)
