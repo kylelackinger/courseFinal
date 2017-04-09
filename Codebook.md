@@ -8,6 +8,11 @@ The data supplied was zipped and required unpacking prior to analysis.  The
 contents of the raw data files are explained at a high level in the 
 attached README.
 
+Content describing feature data is relied heavily on the original data producer 
+with reference here:
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
 ### Raw Data
 
 The data obtained was initially processed by the original research team and is
